@@ -1,13 +1,13 @@
 const { DataTypes } = require('sequelize');
 const connection = require('../config/database'); 
 
-const Author = connection.define('Author', {
+const Category = connection.define('Category', {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey:true,
         autoIncrement: true,
-        field: 'author_id'
+        field: 'category_id'
       },
   name: {
     type: DataTypes.STRING,
@@ -15,5 +15,5 @@ const Author = connection.define('Author', {
   },
 });
 
-module.exports = Author;
+module.exports = Category;
 
