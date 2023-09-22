@@ -32,6 +32,8 @@ const Book = connection.define('Book', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+}, {
+  timestamps: false
 });
 
 

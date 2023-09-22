@@ -5,15 +5,16 @@ const Author = connection.define('Author', {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        primaryKey:true,
+        primaryKey: true,
         autoIncrement: true,
         field: 'author_id'
-      },
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
+    },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false, 
+    },
+}, {
+    timestamps: false
 });
 
 module.exports = Author;
-
