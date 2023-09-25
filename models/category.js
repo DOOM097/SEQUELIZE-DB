@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const connection = require('../config/database'); 
+const Book = require('./book');
 
 const Category = connection.define('Category', {
     id: {
@@ -17,6 +18,6 @@ const Category = connection.define('Category', {
     timestamps: false,
     
 });
-
+Category.belongsToMany(Book, { through: 'BookCategory' });
 module.exports = Category;
 

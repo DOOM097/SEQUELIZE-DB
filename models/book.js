@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 const connection = require('../config/database');
-const Author = require('./author');
 
 const Book = connection.define('Book', {
   title: {
@@ -37,5 +36,5 @@ const Book = connection.define('Book', {
 });
 
 
-Book.belongsToMany(Author, { through: 'BookAuthors' });
+
 module.exports = Book;

@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const connection = require('../config/database'); 
+const Book = require('./book');
 
 const Author = connection.define('Author', {
     id: {
@@ -17,4 +18,5 @@ const Author = connection.define('Author', {
     timestamps: false
 });
 
+Author.belongsToMany(Book, { through: 'BookAuthor' });
 module.exports = Author;
